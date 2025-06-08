@@ -1,0 +1,456 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  /* 
+  outline: 1px solid red; 
+  */
+}
+
+.wrap {
+  line-height: 1.5;
+  background-color: #FBFBFB;  
+  margin: 0 auto;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+/* navbar導覽列 */
+.navbar ul{
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  padding: 20px;
+}
+
+.navbar li a {
+  color: #000000;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 28px;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+
+/* header表頭 */
+.hero-section {
+  display: flex;
+}
+
+.hero-section .hero-section-img {
+  width: 50%;
+}
+
+.hero-section .hero-section-text {
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true);
+  width: 50%;
+  padding-left: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  color: #0027D5;
+  font-size: 120px;
+  font-weight: 900;
+}
+
+.subtitle {
+  color: #0027D5;
+  font-size: 28px;
+  font-weight: 700;
+  padding-left: 10px;  
+}
+
+.about-section {
+  display: flex;
+  border: 1px solid #4B4B4B;
+}
+
+.about-section .about-section-img {
+  width: 50%;
+}
+
+.about-section-text {
+  background-color: #fff;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 24px;
+}
+
+time {
+  font-weight: 500;
+}
+
+.featured {
+  display: flex;
+  padding-bottom: 8px;
+}
+
+.featured-line {
+  font-weight: 500;
+  font-size: 24px;
+  color: #0027D5;
+}
+
+.tag {
+  font-weight: 700;
+  color: #fff;
+  background: #0027D5;
+  border-radius: 40px;
+  padding: 6px 12px;
+  margin-left: 8px;
+}
+
+.about-title {
+  font-weight: 700;
+  font-size: 28px;
+  padding-bottom: 8px;
+}
+
+.about-intro {
+  max-width: 636px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 12px;
+}
+
+.readmore {
+  display: inline-block;
+  text-decoration: none;
+  color: #4B4B4B;
+  border-radius: 40px;
+  border: 1px solid #4B4B4B;
+  padding: 8px 16px;
+  text-align: center;
+  &:hover {
+    color: #fff;
+    background: #4B4B4B;    
+  }
+}
+
+@media (max-width: 1296px) {
+  .about-intro {
+    width: 96%;
+    margin-right: 20px;
+    margin-bottom: 12px;
+  }  
+}
+
+
+@media (max-width: 992px) {
+    .hero-section {
+        flex-wrap: wrap;
+    }
+    .hero-section .hero-section-img {
+        width: 100%;
+        object-fit: cover;
+    }
+    .hero-section .hero-section-text {
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true);
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px;
+    }
+
+    .about-section {
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+    }
+
+    .about-section .about-section-img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .about-section-text {
+      width: 96%;
+      padding: 40px;
+    }
+
+    .about-intro {
+      width: 96%;
+      margin-right: 20px;
+      margin-bottom: 12px;
+    }
+
+}
+
+
+
+/* main主要文章 */
+.course {
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+/* search-bar搜尋欄 */
+.search-bar {
+  max-width: 416px;
+  display: flex;
+
+  border: 1px solid #4B4B4B;
+  border-radius: 40px;
+  padding: 8px 16px;
+  margin-top:80px;
+  margin-bottom: 40px;
+}
+
+.icon {
+  font-size: 24px;
+  color: #4B4B4B;
+  padding-right: 10px;
+}
+
+.search-bar input { 
+  border: unset;
+  outline:none; 
+  font-size: 16px;
+}
+
+
+/* course-list列表 */
+.course-list ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px 24px;
+}
+
+
+@media (max-width: 1296px) {
+    .course {
+      max-width: 96%;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start; 
+    }
+    
+    .course-list {
+      justify-content: center;
+    }
+
+    .search-bar {
+      width: 90%;
+      margin-top:80px;
+      margin-bottom: 40px; 
+    }
+}
+
+@media (max-width: 992px) {
+    .course {
+      max-width: 96%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start; 
+    }
+    .course-list {
+      justify-content: center; 
+    }
+    .search-bar {
+      width: 90%;
+      margin-top:80px;
+      margin-bottom: 40px;  
+    }
+}
+
+@media (max-width: 576px) {
+    .course {
+        max-width: 96%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;         
+    }
+
+    .course-list {
+      justify-content: center; 
+    }
+
+}
+
+.course-card {
+  max-width: 416px;
+  margin-bottom: 80px;
+}
+
+.card-img {
+  padding-bottom: 16px;
+}
+
+.card-tag {
+    display: flex;
+}
+
+.card-tag a{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  &:hover{
+    opacity: 0.5;
+  }
+}
+
+.card-title {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+  padding-bottom: 8px;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.card-intro {
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 設定顯示 2行 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0px 24px;
+}
+
+.pagination li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #4B4B4B;
+  font-weight: 500;
+  &:hover {
+    font-size: 24px;
+    line-height: 1;
+  }
+}
+
+.pagination .current-page {
+  color: #0027D5;
+}
+
+/* footer表尾 */
+footer {
+  max-width: 1296px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.email {
+  display: inline-block;
+  text-decoration: none;
+  color: #000000;
+  font-size: 32px;
+  font-weight: 500;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.media-types {
+  display: flex;
+}
+
+.media-icon:hover{
+  opacity: 0.5;
+}
+
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #FFF;
+}
+
+@media (max-width: 1296px) {
+  footer {
+    padding: 0px 40px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  footer {
+    display: none; 
+  }
+}
